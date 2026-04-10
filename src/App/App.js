@@ -1,11 +1,14 @@
-import { Component } from 'react';
+import { Component, StrictMode } from 'react';
 import './App.css';
-import Login from '../Login/Login';
+import Login from '../Login';
+
 
 class App extends Component {
   render() {
     return (
-     <Login></Login>
+      <StrictMode>
+        <Login />
+      </StrictMode>
     )
   }
 }
