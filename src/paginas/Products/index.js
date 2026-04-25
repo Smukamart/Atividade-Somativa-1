@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 function Products() {
     return (
-        <div>
+        <div className="App-header">
             <h1>Products Page</h1>
             <nav style={{ marginBottom: "20px" }}>
                 <Link to="/products/car">Cars</Link> | {" "}

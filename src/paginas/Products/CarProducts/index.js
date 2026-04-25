@@ -1,6 +1,6 @@
 function CarProducts() {
     return (
-        <div>
+        <div className="App-header">
             <h2>Cars</h2>
             <ul>
                 <li>Audi</li>

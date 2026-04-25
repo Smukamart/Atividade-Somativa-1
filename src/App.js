@@ -7,6 +7,7 @@ import Contact from './paginas/Contato/index';
 import Products from './paginas/Products/index';
 import CarProducts from './paginas/Products/CarProducts/index';
 import BikeProducts from './paginas/Products/BikeProducts/index';
+import Cadastro from './paginas/Cadastro/index';
 
 class App extends Component {
   constructor(props) {
@@ -25,12 +26,14 @@ class App extends Component {
         <BrowserRouter>
           <nav style={{ marginBottom: '20px' }}>
             <NavLink to="/" style={navLinkStyles}>Home</NavLink> | {" "}
+            <NavLink to="/cadastro" style={navLinkStyles}>Cadastro</NavLink> | {" "}
             <NavLink to="/contato" style={navLinkStyles}>Contato</NavLink> | {" "}
             <NavLink to="/sobre" style={navLinkStyles}>Sobre</NavLink> | {" "}
             <NavLink to="/products" style={navLinkStyles}>Products</NavLink>
           </nav>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/sobre" element={<About />} />
             <Route path="/products" element={<Products />}>
