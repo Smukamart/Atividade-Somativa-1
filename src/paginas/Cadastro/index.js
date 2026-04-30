@@ -32,6 +32,7 @@ class Cadastro extends Component {
                 email: this.state.email,
                 nome: this.state.nome,
                 sobrenome: this.state.sobrenome,
+                dataNascimento: this.state.dataNascimento,
             });
 
             alert("Usuário cadastrado com sucesso!");
@@ -41,7 +42,9 @@ class Cadastro extends Component {
                 senha: "",
                 nome: "",
                 sobrenome: "",
+                dataNascimento: "",
             });
+            window.location.href = "/"; // Redirect to login page after successful registration
         } catch (err) {
             this.setState({ error: err.message });
         } finally {
@@ -86,8 +89,18 @@ class Cadastro extends Component {
                         onChange={this.handleChange}
                         required
                     /><br />
+                    <label style={{ fontWeight: 'bold', fontSize: '16px' }}>Data de Nascimento:</label><br />
+                    <input
+                        type="date"
+                        name="dataNascimento"
+                        placeholder="Data de Nascimento"
+                        onChange={this.handleChange}
+                        required /><br />
                     <button type="submit" disabled={this.state.loading}>
                         {this.state.loading ? "Cadastrando..." : "Cadastrar"}
+                    </button>
+                    <button type="cancel" onClick={() => window.location.href = "/"} disabled={this.state.loading}>
+                        Cancelar
                     </button>
                 </form>
                 {this.state.error && <p style={{ color: 'red' }}>{this.state.error}</p>}

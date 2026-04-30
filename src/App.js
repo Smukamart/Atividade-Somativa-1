@@ -8,6 +8,7 @@ import Products from './paginas/Products/index';
 import CarProducts from './paginas/Products/CarProducts/index';
 import BikeProducts from './paginas/Products/BikeProducts/index';
 import Cadastro from './paginas/Cadastro/index';
+import Principal from './paginas/Principal/index';
 
 class App extends Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class App extends Component {
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/sobre" element={<About />} />
+            <Route path='/principal' element={<Principal />} />
             <Route path="/products" element={<Products />}>
               <Route path="car" element={<CarProducts />} />
               <Route path="bike" element={<BikeProducts />} />
